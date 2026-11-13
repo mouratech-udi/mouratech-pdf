@@ -1,10 +1,10 @@
 # Mouratech PDF — Leitor e Assinador Digital
 
 ## Instalação com Windows Installer
-Execute Mouratech-PDF-1.3.0-x64.msi com o usuário que utilizará o leitor. Procure Mouratech PDF no menu Iniciar. No Explorer, clique com o botão direito em um PDF, escolha Abrir com e selecione Mouratech PDF. A escolha de leitor padrão fica com o usuário. Próximos instaladores MSI com versão superior atualizam esta instalação. Uma versão antiga extraída de ZIP pode coexistir em outra pasta. Para remover a instalação MSI use Aplicativos instalados no Windows.
+Execute Mouratech-PDF-1.3.1-x64.msi com o usuário que utilizará o leitor. Procure Mouratech PDF no menu Iniciar. No Explorer, clique com o botão direito em um PDF, escolha Abrir com e selecione Mouratech PDF. A escolha de leitor padrão fica com o usuário. Próximos instaladores MSI com versão superior atualizam esta instalação. Uma versão antiga extraída de ZIP pode coexistir em outra pasta. Para remover a instalação MSI use Aplicativos instalados no Windows.
 
 ## Ferramentas do PDF
-Para marcar uma área, escolha **Ferramentas → Marca-texto** e arraste sobre o trecho. Para anotar, escolha **Adicionar nota**, clique na página e digite o comentário. **Ler notas da página** mostra o conteúdo. Use **Salvar** ou **Salvar como** para gravar as alterações.
+Para marcar uma área, escolha **Ferramentas → Marca-texto** e arraste sobre o trecho. Para anotar, escolha **Adicionar nota**, clique na página e digite o comentário. **Ler notas da página** mostra o conteúdo. Para excluir uma, use **Ferramentas → Remover nota da página**, selecione a nota e clique em **Remover nota**. A última exclusão pode ser desfeita antes de salvar. Use **Salvar** ou **Salvar como** para gravar as alterações.
 
 **Unir, dividir e organizar PDFs** reúne as páginas em uma lista com prévia. Adicione arquivos, altere a ordem com **Subir** e **Descer** ou remova páginas. **Salvar PDF organizado** gera um novo arquivo. Para extrair várias páginas juntas, selecione-as com Ctrl ou Shift e escolha **Extrair seleção**. **Dividir por página** cria uma nova pasta com um PDF por página. Esta versão trabalha com páginas de documentos sem proteção, assinaturas digitais ou campos de formulário.
 
@@ -68,6 +68,7 @@ O código 0 indica aprovação. O ensaio gera um par de PDFs fictícios e usa um
 
 ## Licenças
 Esta edição piloto com fonte incluída utiliza iText sob AGPLv3. Consulte o texto da licença em Licencas. Para distribuição proprietária, reveja o licenciamento comercial do iText antes da entrega dessa modalidade. As demais dependências conservam suas licenças. [Licenciamento iText](https://itextpdf.com/how-buy)
+
 
 
 
