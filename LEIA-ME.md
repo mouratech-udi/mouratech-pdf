@@ -1,81 +1,90 @@
-# Mouratech PDF — Leitor e Assinador Digital
+# Mouratech PDF
 
-## Instalação com Windows Installer
-Execute Mouratech-PDF-1.4.2-x64.msi com o usuário que utilizará o leitor. Procure Mouratech PDF no menu Iniciar. No Explorer, clique com o botão direito em um PDF, escolha Abrir com e selecione Mouratech PDF. A escolha de leitor padrão fica com o usuário. Próximos instaladores MSI com versão superior atualizam esta instalação. Uma versão antiga extraída de ZIP pode coexistir em outra pasta. Para remover a instalação MSI use Aplicativos instalados no Windows.
+Guia da versão 1.4.2 para Windows de 64 bits.
 
-## Ferramentas do PDF
-Para marcar uma área, escolha **Ferramentas → Marca-texto** e arraste sobre o trecho. Para anotar, escolha **Adicionar nota**, clique na página e digite o comentário. **Ler notas da página** mostra o conteúdo. Para excluir uma, use **Ferramentas → Remover nota da página**, selecione a nota e clique em **Remover nota**. A última exclusão pode ser desfeita antes de salvar. Use **Salvar** ou **Salvar como** para gravar as alterações.
+O Mouratech PDF permite ler, anotar, organizar, imprimir e assinar PDFs no seu computador. Você só precisa de certificado digital para assinar com um A1.
 
-**Unir, dividir e organizar PDFs** reúne as páginas em uma lista com prévia. Adicione arquivos, altere a ordem com **Subir** e **Descer** ou remova páginas. **Salvar PDF organizado** gera um novo arquivo. Para extrair várias páginas juntas, selecione-as com Ctrl ou Shift e escolha **Extrair seleção**. **Dividir por página** cria uma nova pasta com um PDF por página. Esta versão trabalha com páginas de documentos sem proteção, assinaturas digitais ou campos de formulário.
+## Instalar e abrir um PDF
 
-**Proteger cópia com senha** cria um novo PDF com criptografia AES-256. Informe e confirme a senha de abertura. O leitor solicita a senha ao abrir a cópia e permite consultá-la em modo de leitura.
+1. Baixe **Mouratech-PDF-Windows-x64.msi** na [página oficial da versão 1.4.2](https://github.com/mouratech-udi/mouratech-pdf/releases/tag/v1.4.2).
+2. Execute o instalador na conta do Windows em que usará o aplicativo.
+3. Abra **Mouratech PDF** pelo menu **Iniciar**. Clique em **Abrir** e escolha um documento.
 
-## Buscar com Ctrl+F
-Digite o texto e pressione Enter para localizar e avançar. Shift+Enter volta uma ocorrência. A busca indica a quantidade e destaca o trecho em amarelo. Esc fecha a busca. PDFs digitalizados precisam de uma camada de texto para permitir pesquisa.
+Você também pode clicar com o botão direito em um PDF no Explorador de Arquivos e escolher **Abrir com → Mouratech PDF**. Para atualizar uma instalação feita pelo MSI, execute o instalador da versão mais recente.
 
-## Assinar lote
-Clique em Assinar lote e selecione os PDFs no disco. Revise cada documento, marque “Confirmo que desejo assinar este documento” e clique em Aprovar para o lote. O primeiro certificado aprovado vale para todo o lote. Você pode pular um documento ou cancelar antes da confirmação final. Depois de confirmar, cada cópia é gravada na pasta do original com o sufixo _assinado. Arquivos alterados desde a revisão e destinos existentes são preservados. Confira o resultado individual na janela final. O lote usa os arquivos salvos no disco.
+## Ler, buscar e imprimir
 
-A impressão física foi confirmada pelo usuário na estação da clínica na versão anterior.
+| Para | Faça assim |
+| --- | --- |
+| Mudar de página | Clique em uma miniatura à esquerda ou use as setas no rodapé, onde aparecem a página atual e o total. |
+| Ajustar o zoom | Gire a roda do mouse sobre o documento. Clique em **Ajustar página** para ver a folha inteira. |
+| Rolar a página | Segure o botão esquerdo e arraste a folha ou use as barras de rolagem. |
+| Buscar uma palavra | Pressione **Ctrl+F**, digite o termo e pressione **Enter**. **Enter** avança, **Shift+Enter** volta e **Esc** fecha a busca. Em documentos digitalizados, a busca depende de uma camada de texto pesquisável. |
+| Imprimir | Pressione **Ctrl+P** ou clique em **Imprimir**. Escolha a impressora e o intervalo de páginas. |
 
-## Instalação portátil
-Em um Windows 10/11 de 64 bits compatível com .NET 10, extraia **todo** o ZIP para uma pasta local, por exemplo Documentos ➜ Aplicativos ➜ Mouratech. Abra **Mouratech.Assinador.exe**. O runtime está incluído. O pacote piloto não tem assinatura de editor Authenticode. Mantenha as DLLs junto ao executável.
+## Assinar digitalmente com um certificado A1
 
-Use o mesmo usuário do Windows em que o seu certificado A1 já está instalado. Em certmgr.msc, confira Pessoal ➜ Certificados, chave privada correspondente e cadeia confiável. O aplicativo usa o repositório Usuário Atual e o provedor criptográfico do Windows. A seleção exige RSA, política de certificado ICP-Brasil A1, validade atual e uso de chave compatível. A assinatura exige que o Windows consiga construir a cadeia com as autoridades já disponíveis.
+1. Abra o PDF e clique em **Assinar digitalmente**.
+2. Selecione seu certificado. Confira o titular e a data de vencimento.
+3. Na prévia da última página, clique logo abaixo de onde deseja colocar o carimbo. Ele aparece **acima do ponto escolhido**. Se a posição estiver bloqueada, escolha uma área branca livre de texto, linhas e imagens.
+4. Marque **Confirmo que desejo assinar este documento** e clique em **Assinar e salvar cópia**.
+5. Escolha a pasta e o nome da cópia. Para `contrato.pdf`, por exemplo, o nome sugerido é `contrato_assinado.pdf`. Se o destino já existir, escolha outro nome. O original é preservado.
 
-## Ler, editar e imprimir
-Abra um PDF pelo botão **Abrir**, pelo menu **Abrir com** do Windows ou passando o caminho ao executável. Clique nas miniaturas à esquerda para navegar. O rodapé mostra a página atual e o total. Sobre o PDF, gire a roda do mouse para cima para ampliar ou para baixo para reduzir, sem segurar Ctrl. Cada passo muda o zoom em 10 pontos percentuais. Sobre as miniaturas, a roda percorre a lista. Use o controle de zoom de 25% a 300%, **Ajustar página** para enquadrar a folha e **Miniaturas** para ocultar ou exibir a lateral.
+O carimbo mostra o titular, a autoridade emissora e a data e hora do computador com o fuso. Quando o certificado traz uma imagem compatível do emissor, ela aparece ao lado do texto. A hora registrada vem do computador e não tem certificação independente de uma autoridade de tempo.
 
-Para rolar, segure o botão esquerdo sobre a página e arraste. Com a folha inteira visível na vertical, um arraste para cima avança uma página e um arraste para baixo volta. As barras de rolagem continuam disponíveis quando o conteúdo ultrapassa a janela.
+**Para assinar vários PDFs**, salve as alterações antes de começar. Clique em **Assinar lote**, selecione os arquivos e revise cada documento. Clique em **Aprovar para o lote** ou **Pular este arquivo**. O primeiro certificado aprovado será usado em todo o lote. Após a confirmação final, cada cópia é salva na pasta do original com o sufixo `_assinado.pdf`. A janela final mostra o resultado de cada arquivo.
 
-Ao abrir um PDF assinado, use **Assinaturas digitais** na barra superior. Escolha a assinatura para ir à página do campo e consultar o titular, o emissor, a integridade da revisão e a cobertura do arquivo. A marca visual depende da aparência gravada no PDF. A verificação local de integridade não consulta revogação.
+**Para inserir uma assinatura manuscrita como imagem**, escolha **Assinar por imagem**, selecione um PNG ou JPEG, ajuste a largura e clique no ponto de inserção. Essa opção acrescenta uma marca visual. Para assinar o conteúdo com seu certificado, use **Assinar digitalmente**.
 
-**Inserir texto** acrescenta texto com tamanho ajustável e quebras de linha à página escolhida. O texto já impresso no PDF permanece como está. **Assinar por imagem** aceita PNG e JPEG. Ajuste a largura, clique no ponto de inserção e confira a prévia antes de aplicar. Se mudar o texto ou o tamanho, clique de novo na página. A imagem é uma marca visual. Use **Assinar digitalmente** para vincular o certificado ao conteúdo, incluindo as alterações que estão em tela.
+## Conferir uma assinatura
 
-**Desfazer** remove a última inserção antes de salvar. **Salvar** grava as alterações no PDF aberto. **Salvar como** permite manter o original. PDFs assinados podem ser lidos, copiados e impressos. A edição fica bloqueada para preservar a assinatura. **Imprimir** usa a caixa de impressão do Windows para todas as páginas ou um intervalo. O papel impresso reproduz o conteúdo visual. A verificação criptográfica depende do arquivo digital.
+Abra o PDF assinado e clique em **Assinaturas digitais**. Selecione a assinatura para consultar o titular, o emissor, a integridade da versão assinada e se ela cobre o arquivo inteiro. Para uma cópia assinada pelo Mouratech PDF, o botão **Verificar** também confere a integridade do arquivo.
 
-## Assinar um documento
-1. Escolha o documento PDF. Use uma pasta local de acesso restrito e fora de pastas sincronizadas para o fluxo confidencial.
-2. Abra o arquivo no leitor, clique em **Assinar digitalmente** e confira a última página. Selecione o certificado que deseja usar. A seleção mostra o titular e a data de vencimento.
-3. A sugestão inicial foi calibrada no PDF de referência de três páginas. Para ajustar, clique no centro da linha de assinatura ou na borda superior do nome. O carimbo ficará 4 pontos acima do clique. O contorno verde indica área livre. Em vermelho, o comando de assinatura fica bloqueado. O contorno é exclusivo da prévia.
-4. Marque **Confirmo que desejo assinar este documento** e clique em **Assinar e salvar cópia**. A janela de destino sugere a mesma pasta e o sufixo **_assinado.pdf**. Você também pode escolher outra pasta ou outro nome. Uma cópia existente impede nova gravação. O programa também confere se o PDF aberto mudou desde a prévia.
-5. Para conferir novamente, use **Verificar uma cópia**. A função aceita a assinatura individual criada por este aplicativo, verifica o conteúdo criptográfico e exige cobertura de todo o arquivo.
+A conferência local não consulta a revogação do certificado. Para obter um relatório externo, selecione manualmente o **PDF digital assinado** no portal do ITI. O aplicativo processa os documentos no computador. O envio ao portal depende dessa ação. [Abrir o VALIDAR do ITI](https://validar.iti.gov.br/)
 
-## Homologação na Multiclínica
-Gere um laudo com paciente fictício no Ergo PC 5.1.1.18 e assine com o A1 instalado na estação do médico. Abra a cópia no leitor habitual e confira as três páginas. Compare conclusão, identificação e CRM. Para avaliação externa, envie manualmente **a cópia fictícia assinada** ao [VALIDAR do ITI](https://validar.iti.gov.br/). Confira o titular e o resultado no relatório de conformidade. Registre o resultado antes de liberar o fluxo clínico. O aplicativo não inicia esse envio.
+## Acrescentar texto, destacar e anotar
 
-## Implementação e limites do piloto
-C# / .NET 10, Windows Forms x64. PAdES Baseline B via iText, SHA-256/RSA, assinatura de certificação DocMDP P=1 e gravação incremental. O carimbo visível diz “Assinado digitalmente”. Os dados do titular estão no certificado incorporado. A criação verifica assinatura, identidade e cobertura antes da publicação da cópia. A rotina local não consulta revogação nem fornece carimbo de tempo confiável ou validação de longo prazo. O usuário apresentou a aprovação do VALIDAR para uma assinatura individual produzida na clínica. A assinatura em lote desta versão foi testada com certificado de laboratório.
+- **Inserir texto.** Digite o conteúdo, ajuste o tamanho e clique na página para conferir a posição. Essa ferramenta acrescenta texto à página.
+- **Destacar um trecho.** Em **Ferramentas → Marca-texto**, arraste sobre a área desejada.
+- **Adicionar ou ler uma nota.** Em **Ferramentas → Adicionar nota**, clique na página e escreva o comentário. Para consultá-lo depois, escolha **Ler notas da página**.
+- **Excluir uma nota.** Em **Ferramentas → Remover nota da página**, selecione o comentário e clique em **Remover nota**. Para recuperar a última nota excluída, use **Desfazer** antes de salvar.
 
-A prévia e a verificação de espaço usam PDFium a 216 dpi e exigem fundo branco, com margem de 2 pontos ao redor do retângulo. A conferência humana vincula a posição ao médico identificado. O piloto bloqueia documentos já assinados, criptografados e páginas finais com rotação, anotações ou geometria não suportada. Não há envio de laudos, registro clínico em log, monitoramento automático de pastas. O PDF original e certificados particulares ficam fora da distribuição.
+Use **Salvar** para gravar as alterações no arquivo aberto ou **Salvar como** para criar uma cópia. Conclua as edições antes de assinar digitalmente. O leitor bloqueia a edição de PDFs já assinados para preservar a assinatura.
 
-## Projeto e reprodução
-O diretório **Fonte** do pacote contém o projeto, o arquivo de dependências fixadas e o autoteste. Com o SDK .NET 10 no Windows, dentro de Fonte, execute:
+## Unir, dividir ou reorganizar páginas
+
+Abra **Ferramentas → Unir, dividir e organizar PDFs** e adicione os arquivos desejados.
+
+- **Unir ou reorganizar.** Confira as miniaturas, use **Subir** e **Descer** para ordenar as páginas e remova as que deseja excluir. Clique em **Salvar PDF organizado** para criar o novo arquivo.
+- **Extrair algumas páginas.** Selecione páginas com **Ctrl** ou um intervalo com **Shift**. Escolha **Extrair seleção** para reuni-las em um PDF.
+- **Separar todas as páginas.** Escolha **Dividir por página** para criar uma pasta com um PDF por página.
+
+A organização de páginas aceita documentos sem senha, assinaturas digitais ou campos de formulário.
+
+## Proteger uma cópia com senha
+
+Abra o PDF e escolha **Ferramentas → Proteger cópia com senha**. Digite e confirme a senha de abertura e salve a cópia. O arquivo protegido usa criptografia AES-256 e solicita a senha quando é aberto.
+
+## Resolver problemas de assinatura
+
+**Meu certificado não aparece.** Na mesma conta do Windows, abra `certmgr.msc` e confira **Pessoal → Certificados**. O aplicativo precisa de um certificado ICP-Brasil A1 RSA válido, com chave privada disponível. Se acabou de instalá-lo, clique em **Atualizar certificados**. A chave é usada pelo Windows, sem necessidade de exportar o PFX.
+
+**O certificado aparece, mas não consigo assinar.** Confira se o carimbo está em uma área livre e se você marcou a confirmação. A assinatura também exige que o Windows reconheça a cadeia de autoridades emissoras. PDFs já assinados ou protegidos e documentos cuja última página tenha rotação, anotações ou recorte especial podem impedir a assinatura nesta versão.
+
+## Código-fonte e licença
+
+O projeto usa C# e .NET 10 e gera assinaturas PAdES Baseline B. O pacote de código-fonte inclui as dependências e as licenças. [Código-fonte da versão 1.4.2](https://github.com/mouratech-udi/mouratech-pdf/releases/download/v1.4.2/Mouratech-PDF-Fonte-1.4.2.zip) · [Licença GNU AGPLv3 do projeto](https://github.com/mouratech-udi/mouratech-pdf/blob/main/LICENSE.md)
+
+Para compilar no Windows com o SDK .NET 10, execute estes comandos na pasta que contém `Mouratech.csproj`:
 
 ```powershell
 dotnet restore --locked-mode -r win-x64
 dotnet publish -c Release -r win-x64 --self-contained true -o ../publicado
 ```
 
-Para executar o autoteste na pasta do programa, escolha um diretório de saída novo:
+Para executar o autoteste, abra a pasta `publicado` e use um nome de diretório de saída que ainda não exista. O teste usa documentos e certificado fictícios. O código de saída zero indica sucesso.
 
 ```powershell
 $p = Start-Process -FilePath .\Mouratech.Assinador.exe -ArgumentList '--autoteste ensaio-local' -Wait -PassThru
 $p.ExitCode
 ```
-
-O código 0 indica aprovação. O ensaio gera um par de PDFs fictícios e usa uma chave RSA efêmera. Exercita colisão, rejeição de certificado sem política A1, perfil PAdES, DocMDP, preservação dos bytes originais e detecção de alteração ou dados anexados. Não utiliza o repositório pessoal. É separado do teste de homologação descrito acima.
-
-## Licenças
-Esta edição piloto com fonte incluída utiliza iText sob AGPLv3. Consulte o texto da licença em Licencas. Para distribuição proprietária, reveja o licenciamento comercial do iText antes da entrega dessa modalidade. As demais dependências conservam suas licenças. [Licenciamento iText](https://itextpdf.com/how-buy)
-
-
-
-
-
-
-
-
-
-O carimbo identifica o titular, o emissor e a data e hora do computador com fuso. A hora é declarada pelo assinador.
-O logotipo aparece quando o certificado contém uma imagem do emissor incorporada em PNG, JPEG ou GIF com resumo SHA-256, SHA-384 ou SHA-512 verificável. Nos demais casos, o carimbo usa apenas texto.
