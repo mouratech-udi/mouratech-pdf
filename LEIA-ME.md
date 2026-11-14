@@ -1,7 +1,7 @@
 # Mouratech PDF — Leitor e Assinador Digital
 
 ## Instalação com Windows Installer
-Execute Mouratech-PDF-1.3.1-x64.msi com o usuário que utilizará o leitor. Procure Mouratech PDF no menu Iniciar. No Explorer, clique com o botão direito em um PDF, escolha Abrir com e selecione Mouratech PDF. A escolha de leitor padrão fica com o usuário. Próximos instaladores MSI com versão superior atualizam esta instalação. Uma versão antiga extraída de ZIP pode coexistir em outra pasta. Para remover a instalação MSI use Aplicativos instalados no Windows.
+Execute Mouratech-PDF-1.4.0-x64.msi com o usuário que utilizará o leitor. Procure Mouratech PDF no menu Iniciar. No Explorer, clique com o botão direito em um PDF, escolha Abrir com e selecione Mouratech PDF. A escolha de leitor padrão fica com o usuário. Próximos instaladores MSI com versão superior atualizam esta instalação. Uma versão antiga extraída de ZIP pode coexistir em outra pasta. Para remover a instalação MSI use Aplicativos instalados no Windows.
 
 ## Ferramentas do PDF
 Para marcar uma área, escolha **Ferramentas → Marca-texto** e arraste sobre o trecho. Para anotar, escolha **Adicionar nota**, clique na página e digite o comentário. **Ler notas da página** mostra o conteúdo. Para excluir uma, use **Ferramentas → Remover nota da página**, selecione a nota e clique em **Remover nota**. A última exclusão pode ser desfeita antes de salvar. Use **Salvar** ou **Salvar como** para gravar as alterações.
@@ -77,3 +77,4 @@ Esta edição piloto com fonte incluída utiliza iText sob AGPLv3. Consulte o te
 
 
 
+O carimbo identifica o titular, o emissor e a data e hora do computador com fuso. A hora é declarada pelo assinador.
