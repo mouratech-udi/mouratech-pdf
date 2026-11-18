@@ -1,12 +1,12 @@
 # Mouratech PDF
 
-Guia da versão 1.4.2 para Windows de 64 bits.
+Guia da versão 1.5.0 para Windows de 64 bits.
 
 O Mouratech PDF permite ler, anotar, organizar, imprimir e assinar PDFs no seu computador. Você só precisa de certificado digital para assinar com um A1.
 
 ## Instalar e abrir um PDF
 
-1. Baixe **Mouratech-PDF-Windows-x64.msi** na [página oficial da versão 1.4.2](https://github.com/mouratech-udi/mouratech-pdf/releases/tag/v1.4.2).
+1. Execute o instalador **Mouratech-PDF-1.5.0-x64.msi** recebido com esta versão. As versões públicas ficam na [página de downloads](https://github.com/mouratech-udi/mouratech-pdf/releases).
 2. Execute o instalador na conta do Windows em que usará o aplicativo.
 3. Abra **Mouratech PDF** pelo menu **Iniciar**. Clique em **Abrir** e escolha um documento.
 
@@ -26,7 +26,7 @@ Você também pode clicar com o botão direito em um PDF no Explorador de Arquiv
 
 1. Abra o PDF e clique em **Assinar digitalmente**.
 2. Selecione seu certificado. Confira o titular e a data de vencimento.
-3. Na prévia da última página, clique logo abaixo de onde deseja colocar o carimbo. Ele aparece **acima do ponto escolhido**. Se a posição estiver bloqueada, escolha uma área branca livre de texto, linhas e imagens.
+3. Em **Página para assinar**, escolha a página desejada. O padrão é a terceira página, ou a última disponível em documentos menores. Na prévia, clique logo abaixo de onde deseja colocar o carimbo. Ele aparece **acima do ponto escolhido**. Se a posição estiver bloqueada, escolha uma área branca livre de texto, linhas e imagens.
 4. Marque **Confirmo que desejo assinar este documento** e clique em **Assinar e salvar cópia**.
 5. Escolha a pasta e o nome da cópia. Para `contrato.pdf`, por exemplo, o nome sugerido é `contrato_assinado.pdf`. Se o destino já existir, escolha outro nome. O original é preservado.
 
@@ -69,11 +69,11 @@ Abra o PDF e escolha **Ferramentas → Proteger cópia com senha**. Digite e con
 
 **Meu certificado não aparece.** Na mesma conta do Windows, abra `certmgr.msc` e confira **Pessoal → Certificados**. O aplicativo precisa de um certificado ICP-Brasil A1 RSA válido, com chave privada disponível. Se acabou de instalá-lo, clique em **Atualizar certificados**. A chave é usada pelo Windows, sem necessidade de exportar o PFX.
 
-**O certificado aparece, mas não consigo assinar.** Confira se o carimbo está em uma área livre e se você marcou a confirmação. A assinatura também exige que o Windows reconheça a cadeia de autoridades emissoras. PDFs já assinados ou protegidos e documentos cuja última página tenha rotação, anotações ou recorte especial podem impedir a assinatura nesta versão.
+**O certificado aparece, mas não consigo assinar.** Confira se o carimbo está em uma área livre e se você marcou a confirmação. A assinatura também exige que o Windows reconheça a cadeia de autoridades emissoras. PDFs já assinados ou protegidos e documentos cuja página escolhida tenha rotação, anotações ou recorte especial podem impedir a assinatura nesta versão.
 
 ## Código-fonte e licença
 
-O projeto usa C# e .NET 10 e gera assinaturas PAdES Baseline B. O pacote de código-fonte inclui as dependências e as licenças. [Código-fonte da versão 1.4.2](https://github.com/mouratech-udi/mouratech-pdf/releases/download/v1.4.2/Mouratech-PDF-Fonte-1.4.2.zip) · [Licença GNU AGPLv3 do projeto](https://github.com/mouratech-udi/mouratech-pdf/blob/main/LICENSE.md)
+O projeto usa C# e .NET 10 e gera assinaturas PAdES Baseline B. O pacote de código-fonte inclui as dependências e as licenças. O código-fonte desta instalação fica na pasta **Fonte** · [Licença GNU AGPLv3 do projeto](https://github.com/mouratech-udi/mouratech-pdf/blob/main/LICENSE.md)
 
 Para compilar no Windows com o SDK .NET 10, execute estes comandos na pasta que contém `Mouratech.csproj`:
 
