@@ -1,12 +1,12 @@
 # Mouratech PDF
 
-Guia da versão 1.5.0 para Windows de 64 bits.
+Guia da versão 1.7.0 para Windows de 64 bits.
 
 O Mouratech PDF permite ler, anotar, organizar, imprimir e assinar PDFs no seu computador. Você só precisa de certificado digital para assinar com um A1.
 
 ## Instalar e abrir um PDF
 
-1. Execute o instalador **Mouratech-PDF-1.5.0-x64.msi** recebido com esta versão. As versões públicas ficam na [página de downloads](https://github.com/mouratech-udi/mouratech-pdf/releases).
+1. Execute o instalador **Mouratech-PDF-1.7.0-x64.msi** recebido com esta versão. As versões públicas ficam na [página de downloads](https://github.com/mouratech-udi/mouratech-pdf/releases).
 2. Execute o instalador na conta do Windows em que usará o aplicativo.
 3. Abra **Mouratech PDF** pelo menu **Iniciar**. Clique em **Abrir** e escolha um documento.
 
@@ -21,6 +21,28 @@ Você também pode clicar com o botão direito em um PDF no Explorador de Arquiv
 | Rolar a página | Segure o botão esquerdo e arraste a folha ou use as barras de rolagem. |
 | Buscar uma palavra | Pressione **Ctrl+F**, digite o termo e pressione **Enter**. **Enter** avança, **Shift+Enter** volta e **Esc** fecha a busca. Em documentos digitalizados, a busca depende de uma camada de texto pesquisável. |
 | Imprimir | Pressione **Ctrl+P** ou clique em **Imprimir**. Escolha a impressora e o intervalo de páginas. |
+
+## Gerar PDFs pela impressora Mouratech PDF
+
+Abra **Ferramentas → Configurar impressora virtual PDF** e escolha uma pasta de entrada. O aplicativo cria a impressora **Mouratech PDF** usando o componente Microsoft Print to PDF instalado no Windows.
+
+1. Mantenha a janela principal do Mouratech aberta ou minimizada.
+2. No programa de exames, escolha **Imprimir → Mouratech PDF**.
+3. Na janela do Windows, salve o PDF na pasta de entrada escolhida.
+4. Aguarde alguns segundos. O documento será aberto em uma nova janela do Mouratech para conferência e assinatura.
+5. Use **Assinar digitalmente** ou **Assinar e imprimir**, conforme desejar.
+
+**Ferramentas → Abrir pasta de entrada PDF** mostra a pasta configurada. Os arquivos presentes antes de abrir o leitor ficam disponíveis nessa pasta. A abertura automática acompanha arquivos novos e novas gravações enquanto a janela principal está aberta. Cópias com o sufixo **_assinado.pdf** ficam fora dessa abertura automática.
+
+Se o programa de exames utiliza a impressora padrão escolhida ao iniciar, selecione Mouratech PDF como padrão nas configurações do Windows antes de abrir o programa de exames. A impressora física preferida é escolhida separadamente no Mouratech.
+
+## Salvar a impressora física preferida
+
+Abra **Ferramentas → Configurar impressora física**, selecione a impressora da clínica, o papel, a orientação e a quantidade de cópias. Clique em **Salvar preferência**. A configuração fica salva para a sua conta do Windows e é usada nas próximas aberturas do Mouratech.
+
+**Imprimir** abre a janela de impressão com essa preferência selecionada, permitindo ajustar as opções para aquele documento. **Assinar e imprimir** usa a preferência salva para enviar a cópia assinada diretamente à impressora depois de salvar e conferir a assinatura. Se a impressora ou o papel salvo estiver indisponível, o aplicativo pede uma nova seleção.
+
+**Assinar digitalmente** continua disponível como opção independente para assinar e salvar o PDF. Use **Assinar e imprimir** quando também quiser uma cópia em papel. O gerador de PDF pode continuar definido como impressora padrão do Windows para o programa de exames.
 
 ## Assinar digitalmente com um certificado A1
 
